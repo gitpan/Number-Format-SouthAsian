@@ -5,6 +5,7 @@ META.json
 META.yml
 Makefile.PL
 README
+README.pod
 dist.ini
 lib/Number/Format/SouthAsian.pm
 t/00-compile.t

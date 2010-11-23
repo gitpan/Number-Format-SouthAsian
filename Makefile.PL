@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'ExtUtils::MakeMaker' => '0',
     'Scalar::Util' => '0'
   },
-  'VERSION' => '0.03',
+  'VERSION' => '0.04',
   'test' => {
     'TESTS' => 't/*.t'
   }
