@@ -19,6 +19,13 @@
             "ExtUtils::MakeMaker" : "6.31"
          }
       },
+      "runtime" : {
+         "requires" : {
+            "Carp" : 0,
+            "ExtUtils::MakeMaker" : 0,
+            "Scalar::Util" : 0
+         }
+      },
       "test" : {
          "requires" : {
             "Test::More" : 0
@@ -26,6 +33,6 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.03"
 }
 

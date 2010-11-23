@@ -21,8 +21,12 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'Number::Format::SouthAsian',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.01',
+  'PREREQ_PM' => {
+    'Carp' => '0',
+    'ExtUtils::MakeMaker' => '0',
+    'Scalar::Util' => '0'
+  },
+  'VERSION' => '0.03',
   'test' => {
     'TESTS' => 't/*.t'
   }

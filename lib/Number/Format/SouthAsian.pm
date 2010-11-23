@@ -3,7 +3,7 @@ use warnings;
 
 package Number::Format::SouthAsian;
 BEGIN {
-  $Number::Format::SouthAsian::VERSION = '0.01';
+  $Number::Format::SouthAsian::VERSION = '0.03';
 }
 
 use Carp;
@@ -15,7 +15,7 @@ Number::Format::SouthAsian - format numbers in the South Asian style
 
 =head1 VERSION
 
-version 0.01
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -28,13 +28,13 @@ words rather than simply separating the numbers with commas.
 
     my $formatter = Number::Format::SouthAsian->new();
     say $formatter->format_number(12345678);             # 1,23,45,678
-    say $formatter->format_number(12345678, words => 1); # 1.2345678 core
+    say $formatter->format_number(12345678, words => 1); # 1.2345678 crores
 
 You can also specify words to new(), which has the affect of setting a
 default value to be used.
 
     my $formatter = Number::Format::SouthAsian->new(words => 1);
-    say $formatter->format_number(12345678);             # 1.2345678 core
+    say $formatter->format_number(12345678);             # 1.2345678 crores
     say $formatter->format_number(12345678, words => 0); # 1,23,45,678
 
 =head1 METHODS
@@ -163,7 +163,9 @@ sub _format_number_wordy {
 
     my $word = $zeroes_to_words{$zeroes};
 
-    my $words = "$fraction $word";
+    my $pluralization = $fraction eq '1' ? '' : 's';
+
+    my $words = sprintf('%s %s%s', $fraction, $word, $pluralization);
 
     return $words;
 }
