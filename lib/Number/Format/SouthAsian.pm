@@ -3,7 +3,7 @@ use warnings;
 
 package Number::Format::SouthAsian;
 BEGIN {
-  $Number::Format::SouthAsian::VERSION = '0.04';
+  $Number::Format::SouthAsian::VERSION = '0.05';
 }
 
 use Carp;
@@ -15,7 +15,7 @@ Number::Format::SouthAsian - format numbers in the South Asian style
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -147,7 +147,7 @@ sub _format_number_wordy {
 
     my $divisor = "1" . ("0" x $zeroes);
 
-    while (!$zeroes_to_words{$zeroes}) {
+    while (!$zeroes_to_words{$zeroes} || (($number / $divisor) < 1)) {
         $zeroes  -=  1;
         $divisor /= 10;
     }
