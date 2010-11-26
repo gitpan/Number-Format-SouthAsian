@@ -23,10 +23,11 @@ my %WriteMakefileArgs = (
   'NAME' => 'Number::Format::SouthAsian',
   'PREREQ_PM' => {
     'Carp' => '0',
+    'English' => '0',
     'ExtUtils::MakeMaker' => '0',
     'Scalar::Util' => '0'
   },
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

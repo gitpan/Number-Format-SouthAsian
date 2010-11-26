@@ -15,6 +15,7 @@ meta-spec:
 name: Number-Format-SouthAsian
 requires:
   Carp: 0
+  English: 0
   ExtUtils::MakeMaker: 0
   Scalar::Util: 0
-version: 0.05
+version: 0.06
