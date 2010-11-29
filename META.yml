@@ -18,4 +18,4 @@ requires:
   English: 0
   ExtUtils::MakeMaker: 0
   Scalar::Util: 0
-version: 0.06
+version: 0.07
