@@ -2,8 +2,8 @@ use strict;
 use warnings;
 
 package Number::Format::SouthAsian;
-BEGIN {
-  $Number::Format::SouthAsian::VERSION = '0.07';
+{
+  $Number::Format::SouthAsian::VERSION = '0.08';
 }
 
 use Carp;
@@ -16,7 +16,7 @@ Number::Format::SouthAsian - format numbers in the South Asian style
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -107,7 +107,7 @@ sub format_number {
     my $result;
 
     if ($want_words) {
-        return  $self->_format_number_wordy($number, %opts);
+        return $self->_format_number_wordy($number, %opts);
     }
     else {
         return $self->_format_number_separators_only($number, %opts);
