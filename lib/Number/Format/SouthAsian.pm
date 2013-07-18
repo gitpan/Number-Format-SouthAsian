@@ -3,7 +3,7 @@ use warnings;
 
 package Number::Format::SouthAsian;
 {
-  $Number::Format::SouthAsian::VERSION = '0.08';
+  $Number::Format::SouthAsian::VERSION = '0.09';
 }
 
 use Carp;
@@ -16,7 +16,7 @@ Number::Format::SouthAsian - format numbers in the South Asian style
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
